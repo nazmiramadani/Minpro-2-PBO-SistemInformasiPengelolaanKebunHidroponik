@@ -16,12 +16,16 @@ Melalui menu utama, pengguna dapat melakukan operasi CRUD (Create, Read, Update,
 
 1. Menu Awal
 
-<img width="484" height="146" alt="image" src="https://github.com/user-attachments/assets/17510ab6-dc3a-46eb-bcab-5330ea6ba8d0" />
+<img width="490" height="164" alt="image" src="https://github.com/user-attachments/assets/17510ab6-dc3a-46eb-bcab-5330ea6ba8d0" />
 
 Pada Tampilan awal terdapat 4 pilihan menu yaitu menu kelola tanaman, kelola perawatan, kelola pekerja, dan keluar.
 
    
 2. Menu Kelola Tanaman
+
+<img width="490" height="164" alt="image" src="https://github.com/user-attachments/assets/eea0c9ce-5bee-4aee-80c5-0ac53c721584" />
+
+Jika masuk ke dalam menu kelola tanaman maka kita bisa melakukan operasi CRUD pada entintas tanaman.
 
    
 3. Menu Kelola Perawatan
