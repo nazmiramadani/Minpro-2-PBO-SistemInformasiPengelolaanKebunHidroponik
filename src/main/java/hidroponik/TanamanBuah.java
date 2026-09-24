@@ -28,7 +28,7 @@ public class TanamanBuah extends Tanaman {
 @Override
 public void tampilkanInfo() {
     super.tampilkanInfo();
-    System.out.println("Skala Brix    : " + skalaBrix + "Brix");
-    System.out.println("Berbiji       : " + (berbiji ? "Yes" : "No"));
+    System.out.println("Skala Brix     : " + skalaBrix + "Brix");
+    System.out.println("Berbiji        : " + (berbiji ? "Yes" : "No"));
 }
 }

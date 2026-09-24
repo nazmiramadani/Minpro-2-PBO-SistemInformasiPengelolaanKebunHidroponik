@@ -28,7 +28,7 @@ public class TanamanSayur extends Tanaman {
 @Override
 public void tampilkanInfo() {
     super.tampilkanInfo();
-    System.out.println("Kerenyahan    : " + tingkatKerenyahan);
-    System.out.println("Masa Simpan   : " + masaSimpan + " Hari");
+    System.out.println("Kerenyahan     : " + tingkatKerenyahan);
+    System.out.println("Masa Simpan    : " + masaSimpan + " Hari");
 }
 }
