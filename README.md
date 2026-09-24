@@ -38,3 +38,5 @@ Jika masuk ke dalam menu kelola tanaman maka kita bisa melakukan operasi CRUD pa
 
 Jika masuk ke dalam menu kelola tanaman maka kita bisa melakukan operasi CRUD pada entintas Pekerja. pada pilihan kembali ke menu utama system akan keluar dari sub menu kelola pekerja dan kembali ke menu awal.
 
+## Penjelasan penerapan encapsulation dan Inheritance
+
