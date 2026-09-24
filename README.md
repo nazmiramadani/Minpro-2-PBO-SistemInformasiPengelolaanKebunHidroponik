@@ -38,5 +38,33 @@ Jika masuk ke dalam menu kelola tanaman maka kita bisa melakukan operasi CRUD pa
 
 Jika masuk ke dalam menu kelola tanaman maka kita bisa melakukan operasi CRUD pada entintas Pekerja. pada pilihan kembali ke menu utama system akan keluar dari sub menu kelola pekerja dan kembali ke menu awal.
 
-## Penjelasan penerapan encapsulation dan Inheritance
+## Penjelasan Penerapan Encapsulation dan Inheritance
+
+### Encapsulation
+
+Seluruh atribut pada class model (`Tanaman`, `TanamanSayur`, `TanamanBuah`, `Perawatan`, `Pekerja`) dideklarasikan dengan **access modifier `private`** (atau `protected` pada atribut yang diturunkan di `Tanaman`), sehingga tidak bisa diakses langsung dari luar class. Akses dilakukan melalui **getter** dan **setter** publik, contohnya:
+
+- `Tanaman`: `getIdTanaman()`, `getNamaTanaman()`, `setNamaTanaman()`, `setGradeTanaman()`, `setSistemIrigasi()` — masing-masing setter melakukan **validasi input** (menolak string kosong) sebelum mengubah nilai atribut.
+- `TanamanBuah`: `setSkalaBrix()` memvalidasi bahwa nilai brix harus berada pada rentang 1–16.
+- `TanamanSayur`: `setMasaSimpan()` memvalidasi bahwa masa simpan harus lebih dari 0.
+- `Pekerja` dan `Perawatan`: setter-nya menolak input `String` kosong (nama, nomor telepon, shift, nama perawatan, frekuensi).
+
+Atribut `idTanaman` pada `Tanaman` dideklarasikan `private final`, artinya nilainya hanya bisa diisi sekali lewat constructor dan tidak dapat diubah setelahnya (tidak disediakan setter untuk ID) — ini melindungi identitas unik objek tanaman.
+
+### Inheritance 
+
+Program menerapkan relasi pewarisan dengan:
+- **Superclass**: `Tanaman` memiliki atribut dan method umum (`namaTanaman`, `gradeTanaman`, `sistemIrigasi`, method `tampilkanInfo()`, dan method `kataKata()` yang dideklarasikan `final` sehingga tidak bisa di-override oleh subclass).
+- **Subclass 1**: `TanamanSayur extends Tanaman` menambahkan atribut khusus sayur (`tingkatKerenyahan`, `masaSimpan`).
+- **Subclass 2**: `TanamanBuah extends Tanaman` menambahkan atribut khusus buah (`skalaBrix`, `berbiji`).
+
+Kedua subclass memanggil constructor superclass melalui `super(...)` untuk mengisi atribut yang diwariskan, lalu menambahkan inisialisasi atribut miliknya sendiri.
+
+## Penerapan Nilai Tambah
+
+### Polymorphism
+
+- Method `tampilkanInfo()` yang dideklarasikan di superclass `Tanaman` di-**override** oleh `TanamanSayur` dan `TanamanBuah`. Masing-masing override memanggil `super.tampilkanInfo()` terlebih dahulu (untuk menampilkan info umum), lalu menambahkan output atribut spesifiknya sendiri (kerenyahan & masa simpan untuk sayur; skala brix & status berbiji untuk buah).
+- Efek polymorphism terlihat jelas di `ManajemenKebun.tampilkanTanaman()`: program melakukan iterasi terhadap `ArrayList<Tanaman>` dan memanggil `t.tampilkanInfo()` pada setiap objek — meskipun tipe referensinya adalah `Tanaman`, method yang dijalankan otomatis sesuai objek aslinya (`TanamanSayur` atau `TanamanBuah`), tanpa perlu pengecekan tipe manual untuk menentukan tampilan.
+
 
