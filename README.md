@@ -11,3 +11,8 @@ Program ini adalah aplikasi berbasis konsol (CLI) yang dibangun menggunakan baha
 * Pekerja: Entitas ini berfungsi untuk mengelola data staf kebun. Atribut yang dicatat meliputi ID, nama, nomor telepon, dan shift kerja.
 
 Melalui menu utama, pengguna dapat melakukan operasi CRUD (Create, Read, Update, Delete) secara lengkap pada ketiga entitas tersebut. Program saat ini juga telah disempurnakan dengan enkapsulasi untuk validasi setter dan perlindungan blok try-catch, sehingga aplikasi tidak akan crash apabila pengguna memasukkan input data yang tidak valid.
+
+## Penjelasan Alur Program
+
+1. Menu Awal
+2. 
